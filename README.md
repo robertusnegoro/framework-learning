@@ -1,31 +1,32 @@
-# ITSM, ITIL, and COBIT Learning Materials
+# IT Governance & Service Management Learning Materials
 
-**Last Updated:** January 2025  
-**Versions:** ITIL 4 (2019, updated 2024-2025), COBIT 2019 (2018, current), ITSM Best Practices
+**Last Updated:** February 2025  
+**Versions:** ITIL 4 (2019, updated 2024-2025), COBIT 2019 (2018, current), TOGAF Standard 10th Edition (2022), ITSM Best Practices
 
 ---
 
 ## Overview
 
-This directory contains comprehensive learning materials for four essential IT governance, service management, and cloud financial management frameworks:
+This directory contains comprehensive learning materials for five essential IT governance, service management, enterprise architecture, and cloud financial management frameworks:
 
 - **ITSM** (IT Service Management) - The practice of designing, implementing, managing, and improving IT services
 - **ITIL 4** (Information Technology Infrastructure Library) - The most widely adopted framework for IT service management
 - **COBIT 2019** (Control Objectives for Information and Related Technologies) - A framework for IT governance and management
+- **TOGAF** (The Open Group Architecture Framework) - The most widely adopted framework for enterprise architecture
 - **FinOps** (Financial Operations) - A cultural practice for managing cloud financial operations and optimizing cloud costs
 
 ---
 
 ## Framework Comparison
 
-| Dimension | ITSM | ITIL 4 | COBIT 2019 | FinOps |
-|-----------|------|--------|------------|--------|
-| **Primary Focus** | IT Service Management Practice | Service Management Framework | IT Governance & Management | Cloud Financial Operations |
-| **Scope** | Operational to Strategic | Service Lifecycle & Value | Governance & Control | Cloud Cost Management |
-| **Level** | Practice/Approach | Framework/Standard | Governance Framework | Cultural Practice |
-| **Key Concepts** | Service lifecycle, processes | Service Value System, 34 practices | 40 governance objectives, 5 domains | 6 capabilities, 3-phase lifecycle |
-| **Best For** | Service delivery improvement | Standardizing service management | Governance, risk, compliance | Cloud cost optimization |
-| **Certification** | Vendor-specific | PeopleCert (Foundation → Master) | ISACA (Foundation → Assessor) | FinOps Foundation (Practitioner → Engineer) |
+| Dimension | ITSM | ITIL 4 | COBIT 2019 | TOGAF | FinOps |
+|-----------|------|--------|------------|-------|--------|
+| **Primary Focus** | IT Service Management Practice | Service Management Framework | IT Governance & Management | Enterprise Architecture | Cloud Financial Operations |
+| **Scope** | Operational to Strategic | Service Lifecycle & Value | Governance & Control | Strategy to Implementation | Cloud Cost Management |
+| **Level** | Practice/Approach | Framework/Standard | Governance Framework | Architecture Framework | Cultural Practice |
+| **Key Concepts** | Service lifecycle, processes | Service Value System, 34 practices | 40 governance objectives, 5 domains | ADM, 4 architecture domains (BDAT) | 6 capabilities, 3-phase lifecycle |
+| **Best For** | Service delivery improvement | Standardizing service management | Governance, risk, compliance | EA design, IT-business alignment | Cloud cost optimization |
+| **Certification** | Vendor-specific | PeopleCert (Foundation → Master) | ISACA (Foundation → Assessor) | The Open Group (Foundation → Practitioner) | FinOps Foundation (Practitioner → Engineer) |
 
 ---
 
@@ -34,18 +35,25 @@ This directory contains comprehensive learning materials for four essential IT g
 ```mermaid
 graph TB
     COBIT[COBIT 2019<br/>Governance & Control] -->|Sets Objectives| ITIL[ITIL 4<br/>Service Management]
+    COBIT -->|Governs| TOGAF[TOGAF<br/>Enterprise Architecture]
+    TOGAF -->|Designs Architecture| ITIL
     ITIL -->|Implements Practices| ITSM[ITSM<br/>Operational Execution]
     COBIT -->|Governs| ITSM
+    TOGAF -->|Informs Cloud Strategy| FinOps[FinOps<br/>Cloud Financial Ops]
     
     style COBIT fill:#e1f5ff
     style ITIL fill:#fff4e1
     style ITSM fill:#e8f5e9
+    style TOGAF fill:#f3e5f5
+    style FinOps fill:#fce4ec
 ```
 
 **Synergy:**
 - **COBIT** establishes governance objectives and control requirements
-- **ITIL 4** provides standardized practices to achieve those objectives
+- **TOGAF** designs the enterprise architecture that realizes governance objectives
+- **ITIL 4** provides standardized practices to manage services running on that architecture
 - **ITSM** operationalizes ITIL practices in day-to-day operations
+- **FinOps** optimizes cloud costs within the technology architecture
 
 **Example Integration:**
 - COBIT defines "Align, Plan & Organize" objectives for change management
@@ -167,6 +175,11 @@ frameworks_learning/
 │   ├── 03_implementation/ (Design and implementation)
 │   ├── 04_advanced/ (Risk, compliance, integration)
 │   └── references/ (ISACA resources)
+├── TOGAF/
+│   ├── 01_foundation/ (TOGAF fundamentals, ADM overview, terminology)
+│   ├── 02_intermediate/ (ADM phases detailed, architecture domains)
+│   ├── 03_advanced/ (Implementation, governance, framework integration)
+│   └── references/ (The Open Group resources, certification paths)
 └── FinOps/
     ├── 01_foundation/ (FinOps fundamentals)
     ├── 02_intermediate/ (Six capabilities)
@@ -214,6 +227,12 @@ frameworks_learning/
 - **Status:** Active and current
 - **Next Version:** No newer version announced as of 2025
 
+### TOGAF
+- **Current Version:** TOGAF Standard, 10th Edition (released 2022)
+- **Previous Version:** TOGAF 9.2 (2018) — certifications still valid
+- **Status:** Active and current
+- **Governing Body:** The Open Group
+
 ### ITSM
 - **Type:** Best practices approach (not versioned)
 - **Alignment:** Closely aligned with ITIL framework
@@ -226,6 +245,7 @@ frameworks_learning/
 ### Official Sources
 - **ITIL:** [itil.com](https://www.itil.com) | [PeopleCert](https://www.peoplecert.org)
 - **COBIT:** [ISACA.org](https://www.isaca.org/resources/cobit)
+- **TOGAF:** [The Open Group](https://www.opengroup.org/togaf)
 - **ITSM:** Various vendors and communities
 
 ### Study Communities
